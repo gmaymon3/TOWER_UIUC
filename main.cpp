@@ -3,21 +3,31 @@
 
 #include <iostream>
 #include "Cube.h"
+#include "Stack.h"
 using namespace std; 
 
 
 // You need to define your main() function here!
 int main()
 {
-    Cube c; 
-    //c.setLength(4); 
-    Cube c2 = c; 
-    c2.setLength(4); 
+    
+    // Create 2 cubes
+    Cube c; // default constructor (length 1)
+    Cube c2 = c; // copy constructor
+    c2.setLength(4); // Set c2 to length 4
 
-    cout << "c1 is" << endl; 
+    // Print Lengths
+    cout << "c1 is: "; 
     cout << c.getVolume() << endl;
-    cout << "c2 is" << endl;
+    cout << "c2 is: ";
     cout << c2.getVolume() << endl;
+    cout << c2 << endl; 
+
+    //Create a stack
+    Stack s1; //default constructor
+    s1.push(c);
+    s1.push(c2); 
+    cout << s1 << endl;
 
     return 0; 
 }
