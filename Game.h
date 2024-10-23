@@ -8,8 +8,10 @@ class Game
 public:
 	Game();
 	void solve();
-	//friend std::ostream& operator<<(std::ostream& os,
-	//	const Game& game);
+	bool valid_move(int idx1, int idx2);
+	void moveCube(int idx1, int idx2);
+	Stack& getStack(int i);
+	friend std::ostream& operator<<(std::ostream& os,const Game& game);
 private:
 	std::vector<Stack> stacks_;
 };

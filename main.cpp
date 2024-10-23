@@ -4,6 +4,8 @@
 #include <iostream>
 #include "Cube.h"
 #include "Stack.h"
+#include "Game.h"
+
 using namespace std; 
 
 
@@ -14,7 +16,7 @@ int main()
     // Create 2 cubes
     Cube c; // default constructor (length 1)
     Cube c2 = c; // copy constructor
-    c2.setLength(4); // Set c2 to length 4
+    c.setLength(4); // Set c2 to length 4
 
     // Print Lengths
     cout << "c1 is: "; 
@@ -28,6 +30,25 @@ int main()
     s1.push(c);
     s1.push(c2); 
     cout << s1 << endl;
+    s1.removeTop(); 
+    cout << s1 << endl; 
+
+    // Create a game 
+    cout << "NOW THE GAME BEGINS!" << endl; 
+    Game g1; 
+    //cout << g1[0] << endl; 
+    cout << g1 << endl;
+    //Stack test_stack = g1.getStack(0); 
+    //bool test_bool = test_stack.isEmpty();
+    //cout << test_bool << endl; 
+    //bool test = g1.valid_move(0,1); 
+    //cout << test << endl; 
+    //Stack s_emp; 
+    //int a = s_emp.size();
+    //cout << a << endl; 
+    g1.solve(); 
+    //g1.moveCube(0, 1);
+    //cout << g1 << endl;
 
     return 0; 
 }
