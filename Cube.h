@@ -1,6 +1,6 @@
 #pragma once
-#include <string>     // For std::string
-#include <iostream>     // For std::string
+#include <string>     
+#include <iostream>   
 
 class Cube
 {

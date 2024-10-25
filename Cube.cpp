@@ -18,11 +18,13 @@ Cube::Cube(double len){
 	length_ = len; 
 }
 
+// Get the volume of the cube 
 double Cube::getVolume()
 {
 	return pow(length_,3);
 }
 
+// Set the private variable length of the cube to new value. 
 void Cube::setLength(double len)
 {
 	length_ = len;

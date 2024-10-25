@@ -47,16 +47,19 @@ bool Game::valid_move(int idx1, int idx2)
 		}
 	}
 
+	// Return if the move is valid or not
 	bool valid_move = !(empty_err || larger_err); 
 
 	return valid_move;
 }
 
+// Return the stack of cubes at specific stack
 Stack& Game::getStack(int i)
 {
 	return stacks_[i];
 }
 
+// Move a cube in the game from a stack to another stack
 void Game::moveCube(int idx1, int idx2)
 {
 	Cube cube = stacks_[idx1].getTop(); 
